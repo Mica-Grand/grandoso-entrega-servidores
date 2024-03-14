@@ -4,6 +4,7 @@
         {{#each products}}
         <li>
             <h2>{{ title }}</h2>
+            <img src={{this.thumbnails}}>
             <p>{{description}}</p>
             <p>${{price}}</p>
         </li>
@@ -22,8 +23,8 @@
         <label for="price">Precio:</label>
         <input type="number" id="price" name="price" required><br>
 
-        <label for="thumbnails">Imágenes:</label>
-        <input type="text" id="thumbnails" name="thumbnails" required><br>
+        <label for="thumbnails">Imagen url:</label>
+        <input type="text" id="thumbnails" name="thumbnails" ><br>
 
         <label for="code">Código:</label>
         <input type="text" id="code" name="code" required><br>

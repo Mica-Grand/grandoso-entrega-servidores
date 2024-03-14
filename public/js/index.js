@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-    const socket = io(); 
+    const socket = io();
     console.log('Conexión establecida con el servidor WebSocket');
 
-    const productList = document.getElementById('product-list');
     const addProductForm = document.getElementById('add-product-form');
 
     // Envío de formulario para agregar producto
@@ -19,13 +17,30 @@ document.addEventListener('DOMContentLoaded', () => {
         const stock = formData.get('stock');
         const category = formData.get('category');
 
-        const newProduct = { title, description, price, thumbnails, code, stock, category };
+        // Validación 
+        if (!title || !description || !price || !code || !stock || !category) {
+            return;
+        }
 
-        // Enviar datos a través de Socket.io
-        socket.emit('addProduct', newProduct);
-        console.log(newProduct);
+        const productData = { title, description, price, thumbnails, code, stock, category };
+
+        // Enviar datos 
+        socket.emit('addProduct', productData);
+        console.log('Producto enviado:', productData);
     });
 
-
-
+    // Escuchar el evento newProductAdded para agregar el nuevo producto a la lista de realtimeproducts
+    socket.on('newProductAdded', (productData) => {
+        console.log('Nuevo producto agregado:', productData);
+        // Imprimir el nuevo producto en la lista 
+        const productList = document.getElementById('product-list');
+        const newProductItem = document.createElement('li');
+        newProductItem.innerHTML = `
+            <h2>${productData.title}</h2>
+            <img src="${productData.thumbnails}">
+            <p>${productData.description}</p>
+            <p>$${productData.price}</p>
+        `;
+        productList.appendChild(newProductItem);
+    });
 });

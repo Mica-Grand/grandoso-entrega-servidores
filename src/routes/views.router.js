@@ -1,5 +1,6 @@
-const { Router } = require('express');
-const router = Router();
+const { Router } = require('express')
+
+const router = Router()
 const ProductManager = require('../ProductManager');
 
 const manager = new ProductManager(`${__dirname}/../../assets/products.json`);
@@ -11,17 +12,16 @@ router.get('/realtimeproducts', async (_, res) => {
 
         const productsData = products.map(product => ({
             title: product.title,
-            thumbnail: product.thumbnail,
+            thumbnails: product.thumbnails,
             description: product.description,
             price: product.price,
             stock: product.stock,
             code: product.code
         }));
 
-       
         res.render('realTimeProducts', {
             title: 'Productos en tiempo real',
-            products: products,
+            products: productsData,
             useWS: true,
             styles: [ 'index.css'],
             scripts: ['index.js'],
@@ -38,7 +38,7 @@ router.get('/', async (_, res) => {
 
         const productsData = products.map(product => ({
             title: product.title,
-            thumbnail: product.thumbnail,
+            thumbnails: product.thumbnails,
             description: product.description,
             price: product.price,
             stock: product.stock,
@@ -49,7 +49,6 @@ router.get('/', async (_, res) => {
             products: productsData,
             useWS: false,
             styles: [ 'index.css'],
-            scripts: ['index.js'],
         });
         } catch (err) {
             console.log(err);
@@ -59,7 +58,4 @@ router.get('/', async (_, res) => {
 
 });
 
-module.exports = {
-    router,
-    manager: manager
-};
+module.exports = router

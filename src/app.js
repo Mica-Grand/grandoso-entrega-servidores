@@ -1,8 +1,9 @@
 const express = require('express');
 const viewsRouter = require('./routes/views.router');
 const handlebars = require('express-handlebars');
-const {Server} = require('socket.io');
-const manager = viewsRouter.manager; 
+const { Server } = require('socket.io');
+const ProductManager = require('./ProductManager');
+
 
 const app = express();
 const PORT = 8080;
@@ -27,26 +28,29 @@ const httpServer = app.listen(PORT, () => {
 });
 
 //servidor WS
-const wsServer = new Server(httpServer);
-app.set('ws', wsServer)
+const socketServer = new Server(httpServer);
+app.set('ws', socketServer)
 
-wsServer.on('connection', (socket) => {
-    console.log('Nuevo cliente conectado via WebSocket');
-    socket.on('addProduct', async (product) => {
+const manager = new ProductManager(`${__dirname}/../assets/products.json`);
+
+socketServer.on('connection', (socket) => {
+    console.log('Nuevo cliente conectado');
+
+    // Manejar el evento 'addProduct'
+    socket.on('addProduct', async (productData) => {
         try {
-            const { title, description, thumbnails, code, category } = product;
-            const price = parseInt(product.price);
-            const stock = parseInt(product.stock);
-            if (!title || !description || !code || !price || isNaN(stock) || stock < 0 || !category) {
-                return res.status(400).json({ error: 'All fields are required except thumbnails' });
+            if (!productData.thumbnails) {
+                productData.thumbnails = "public/img/image.jpeg"; 
             }
+            // Agregar el nuevo producto utilizando ProductManager
+            await manager.addProduct(productData.title, productData.description, productData.code, productData.price, productData.stock, productData.category, productData.thumbnails);
+            console.log('Producto agregado:', productData);
 
-            await ProductManager.addProduct(title, description, price, thumbnails, code, stock, category);
-            console.log('Added product:', product);
-            wsServer.emit('newProductAdded', product);
-
+            // Emitir el evento newProductAdded a todos los clientes
+            socketServer.emit('newProductAdded', productData);
         } catch (error) {
             console.error('Error al agregar el producto:', error);
         }
     });
-})
+
+});

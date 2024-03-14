@@ -4,7 +4,7 @@
     "title": "remera",
     "description": "Este es un producto prueba",
     "price": 200,
-    "thumbnail": "Sin imagen",
+    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
     "code": "abc123",
     "stock": 25,
     "category": "ropa",
@@ -15,7 +15,7 @@
     "title": "pantalon",
     "description": "Este es otro un producto prueba",
     "price": 500,
-    "thumbnail": "Otra sin imagen",
+    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
     "code": "def456",
     "stock": 18,
     "category": "ropa",
@@ -26,7 +26,7 @@
     "title": "campera",
     "description": "Este es otro un producto prueba",
     "price": 800,
-    "thumbnail": "Otra sin imagen",
+    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
     "code": "jkl123",
     "stock": 10,
     "category": "ropa",
@@ -37,7 +37,7 @@
     "title": "medias",
     "description": "Este es otro un producto prueba",
     "price": 50,
-    "thumbnail": "Otra sin imagen",
+    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
     "code": "mno456",
     "stock": 30,
     "category": "ropa",
@@ -48,7 +48,7 @@
     "title": "bufanda",
     "description": "Este es otro un producto prueba",
     "price": 100,
-    "thumbnail": "Otra sin imagen",
+    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
     "code": "pqr789",
     "stock": 20,
     "category": "accesorios",
@@ -59,7 +59,7 @@
     "title": "sombrero",
     "description": "Este es otro un producto prueba",
     "price": 120,
-    "thumbnail": "Otra sin imagen",
+    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
     "code": "stu012",
     "stock": 22,
     "category": "accesorios",
@@ -70,7 +70,7 @@
     "title": "guantes",
     "description": "Este es otro un producto prueba",
     "price": 80,
-    "thumbnail": "Otra sin imagen",
+    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
     "code": "vwx345",
     "stock": 28,
     "category": "accesorios",
@@ -81,7 +81,7 @@
     "title": "musculosa",
     "description": "Este es otro un producto prueba",
     "price": 700,
-    "thumbnail": "Otra sin imagen",
+    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
     "code": "yzab67",
     "stock": 12,
     "category": "ropa",
@@ -92,7 +92,7 @@
     "title": "lentes",
     "description": "Este es otro un producto prueba",
     "price": 150,
-    "thumbnail": "Otra sin imagen",
+    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
     "code": "cdef89",
     "stock": 15,
     "category": "accesorios",
@@ -106,10 +106,7 @@
     "price": 99.99,
     "stock": 10,
     "category": "Electrónicos",
-    "thumbnails": [
-      "url1",
-      "url2"
-    ],
+    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
     "status": true
   },
   {
@@ -120,10 +117,7 @@
     "price": 60,
     "stock": 10,
     "category": "flores",
-    "thumbnails": [
-      "url1",
-      "url2"
-    ],
+    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
     "status": true
   },
   {
@@ -134,10 +128,7 @@
     "price": 500,
     "stock": 10,
     "category": "útiles escolares",
-    "thumbnails": [
-      "url1",
-      "url2"
-    ],
+    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
     "status": true
   },
   {
@@ -148,10 +139,7 @@
     "price": 500,
     "stock": 10,
     "category": "útiles escolares",
-    "thumbnails": [
-      "url1",
-      "url2"
-    ],
+    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
     "status": true
   },
   {
@@ -162,10 +150,62 @@
     "price": 500,
     "stock": 10,
     "category": "útiles escolares",
-    "thumbnails": [
-      "url1",
-      "url2"
-    ],
+    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
+    "status": true
+  },
+  {
+    "id": 16,
+    "title": "test",
+    "description": "prueba",
+    "code": "1223556",
+    "price": "2",
+    "stock": "1",
+    "category": "blabla",
+    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
+    "status": true
+  },
+  {
+    "id": 17,
+    "title": "prueba",
+    "description": "vjejew",
+    "code": "949494",
+    "price": "2",
+    "stock": "2",
+    "category": "blabla",
+    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
+    "status": true
+  },
+  {
+    "id": 18,
+    "title": "prueba2",
+    "description": "vjejew",
+    "code": "949494",
+    "price": "2",
+    "stock": "2",
+    "category": "blabla",
+    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
+    "status": true
+  },
+  {
+    "id": 19,
+    "title": "ventana",
+    "description": "adnfwnnfw",
+    "code": "wdqkkq",
+    "price": "2",
+    "stock": "2",
+    "category": "ewjwj",
+    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
+    "status": true
+  },
+  {
+    "id": 20,
+    "title": "otra prueba",
+    "description": "adkdkd",
+    "code": "2kkfkwk232",
+    "price": "2",
+    "stock": "3",
+    "category": "mdmms",
+    "thumbnails": "https://www.ideahogar.com.ar/10967-medium_default/celular-motorola-g42-rosa-metalico-ean-994220.jpg",
     "status": true
   }
 ]
