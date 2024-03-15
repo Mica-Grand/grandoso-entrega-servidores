@@ -11,12 +11,15 @@ router.get('/realtimeproducts', async (_, res) => {
         const products = await manager.getProducts();
 
         const productsData = products.map(product => ({
+            id: product.id,
             title: product.title,
             thumbnails: product.thumbnails,
             description: product.description,
             price: product.price,
             stock: product.stock,
-            code: product.code
+            code: product.code,
+            category: product.category
+
         }));
 
         res.render('realTimeProducts', {
@@ -37,12 +40,14 @@ router.get('/', async (_, res) => {
         const products = await manager.getProducts();
 
         const productsData = products.map(product => ({
+            id: product.id,
             title: product.title,
             thumbnails: product.thumbnails,
             description: product.description,
             price: product.price,
             stock: product.stock,
-            code: product.code
+            code: product.code,
+            category: product.category
         }));
 
         res.render('home', {

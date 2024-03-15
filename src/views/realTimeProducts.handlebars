@@ -1,5 +1,6 @@
+<h1>Productos</h1>
+
 <div>
-    <h1>Products en tiempo real</h1>
     <ul id="product-list">
         {{#each products}}
         <li>
@@ -7,10 +8,13 @@
             <img src={{this.thumbnails}}>
             <p>{{description}}</p>
             <p>${{price}}</p>
+            <button class="delete-product" data-id="{{id}}">Eliminar</button>
         </li>
         {{/each}}
+
     </ul>
 </div>
+
 
 <div>
     <form id="add-product-form" action="/realtimeproducts" method="post">
@@ -24,7 +28,7 @@
         <input type="number" id="price" name="price" required><br>
 
         <label for="thumbnails">Imagen url:</label>
-        <input type="text" id="thumbnails" name="thumbnails" ><br>
+        <input type="text" id="thumbnails" name="thumbnails"><br>
 
         <label for="code">Código:</label>
         <input type="text" id="code" name="code" required><br>

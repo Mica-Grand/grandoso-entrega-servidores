@@ -32,15 +32,55 @@ document.addEventListener('DOMContentLoaded', () => {
     // Escuchar el evento newProductAdded para agregar el nuevo producto a la lista de realtimeproducts
     socket.on('newProductAdded', (productData) => {
         console.log('Nuevo producto agregado:', productData);
-        // Imprimir el nuevo producto en la lista 
-        const productList = document.getElementById('product-list');
-        const newProductItem = document.createElement('li');
-        newProductItem.innerHTML = `
-            <h2>${productData.title}</h2>
-            <img src="${productData.thumbnails}">
-            <p>${productData.description}</p>
-            <p>$${productData.price}</p>
-        `;
-        productList.appendChild(newProductItem);
+        
     });
+
+    socket.on('productListUpdated', (updatedProducts) => {
+        console.log('Lista de productos actualizada:', updatedProducts);
+        // Actualizar la interfaz de usuario con la lista actualizada de productos
+
+        renderProductList(updatedProducts);
+    });
+
+    // Escuchar el evento de click eliminar
+    document.addEventListener('click', (event) => {
+        if (event.target.classList.contains('delete-product')) {
+            const productId = parseInt(event.target.dataset.id); 
+            // Emitir un evento al servidor para eliminar el producto
+            socket.emit('deleteProduct', productId); 
+        }
+    });
+    // Escuchar el evento productDeleted para eliminar el producto de la lista en tiempo real
+    socket.on('productDeleted', (productId) => {
+        console.log('Producto eliminado:', productId);
+    })
+
+    // Escuchar el evento productListUpdated para actualizar la lista de productos en tiempo real
+    socket.on('productListUpdated', (updatedProducts) => {
+        console.log('Lista de productos actualizada:', updatedProducts);
+        // Actualizar la interfaz de usuario con la lista actualizada de productos
+    
+        renderProductList(updatedProducts);
+    });
+
+    
+    function renderProductList(products) {
+        const productList = document.getElementById('product-list');
+        productList.innerHTML = '';
+        products.forEach(product => {
+            const newProductItem = document.createElement('li');
+            newProductItem.setAttribute('id', `product-${product.id}`);
+            newProductItem.innerHTML = `
+            <h2>${product.title}</h2>
+            <img src="${product.thumbnails}">
+            <p>${product.description}</p>
+            <p>$${product.price}</p>
+            <button class="delete-product" data-id="${product.id}">Eliminar</button>
+        `;
+            productList.appendChild(newProductItem);
+        });
+    }
+
+
+
 });

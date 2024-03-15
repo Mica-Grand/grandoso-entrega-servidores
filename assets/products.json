@@ -1,16 +1,5 @@
 [
   {
-    "id": 1,
-    "title": "remera",
-    "description": "Este es un producto prueba",
-    "price": 200,
-    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
-    "code": "abc123",
-    "stock": 25,
-    "category": "ropa",
-    "status": true
-  },
-  {
     "id": 2,
     "title": "pantalon",
     "description": "Este es otro un producto prueba",
@@ -29,17 +18,6 @@
     "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
     "code": "jkl123",
     "stock": 10,
-    "category": "ropa",
-    "status": true
-  },
-  {
-    "id": 5,
-    "title": "medias",
-    "description": "Este es otro un producto prueba",
-    "price": 50,
-    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
-    "code": "mno456",
-    "stock": 30,
     "category": "ropa",
     "status": true
   },
@@ -67,145 +45,13 @@
   },
   {
     "id": 8,
-    "title": "guantes",
-    "description": "Este es otro un producto prueba",
-    "price": 80,
-    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
-    "code": "vwx345",
-    "stock": 28,
-    "category": "accesorios",
-    "status": true
-  },
-  {
-    "id": 9,
-    "title": "musculosa",
-    "description": "Este es otro un producto prueba",
-    "price": 700,
-    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
-    "code": "yzab67",
-    "stock": 12,
+    "title": "remera",
+    "description": "azul de algodon",
+    "code": "12344hh",
+    "price": "6000",
+    "stock": "5",
     "category": "ropa",
-    "status": true
-  },
-  {
-    "id": 10,
-    "title": "lentes",
-    "description": "Este es otro un producto prueba",
-    "price": 150,
     "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
-    "code": "cdef89",
-    "stock": 15,
-    "category": "accesorios",
-    "status": true
-  },
-  {
-    "id": 11,
-    "title": "Producto de ejemplo",
-    "description": "Esta es una descripción de ejemplo",
-    "code": "ABC123",
-    "price": 99.99,
-    "stock": 10,
-    "category": "Electrónicos",
-    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
-    "status": true
-  },
-  {
-    "id": 12,
-    "title": "Producto de ejemplo",
-    "description": "Esta es una descripción de ejemplo",
-    "code": "hrdhdr",
-    "price": 60,
-    "stock": 10,
-    "category": "flores",
-    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
-    "status": true
-  },
-  {
-    "id": 13,
-    "title": "birome",
-    "description": "birome azul trazo fino",
-    "code": "vbvgae",
-    "price": 500,
-    "stock": 10,
-    "category": "útiles escolares",
-    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
-    "status": true
-  },
-  {
-    "id": 14,
-    "title": "birome negra",
-    "description": "birome negra trazo fino",
-    "code": "ghrfhhjj",
-    "price": 500,
-    "stock": 10,
-    "category": "útiles escolares",
-    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
-    "status": true
-  },
-  {
-    "id": 15,
-    "title": "birome negra",
-    "description": "birome negra trazo fino",
-    "code": "ghrfhhjj",
-    "price": 500,
-    "stock": 10,
-    "category": "útiles escolares",
-    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
-    "status": true
-  },
-  {
-    "id": 16,
-    "title": "test",
-    "description": "prueba",
-    "code": "1223556",
-    "price": "2",
-    "stock": "1",
-    "category": "blabla",
-    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
-    "status": true
-  },
-  {
-    "id": 17,
-    "title": "prueba",
-    "description": "vjejew",
-    "code": "949494",
-    "price": "2",
-    "stock": "2",
-    "category": "blabla",
-    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
-    "status": true
-  },
-  {
-    "id": 18,
-    "title": "prueba2",
-    "description": "vjejew",
-    "code": "949494",
-    "price": "2",
-    "stock": "2",
-    "category": "blabla",
-    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
-    "status": true
-  },
-  {
-    "id": 19,
-    "title": "ventana",
-    "description": "adnfwnnfw",
-    "code": "wdqkkq",
-    "price": "2",
-    "stock": "2",
-    "category": "ewjwj",
-    "thumbnails": "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
-    "status": true
-  },
-  {
-    "id": 20,
-    "title": "otra prueba",
-    "description": "adkdkd",
-    "code": "2kkfkwk232",
-    "price": "2",
-    "stock": "3",
-    "category": "mdmms",
-    "thumbnails": "https://www.ideahogar.com.ar/10967-medium_default/celular-motorola-g42-rosa-metalico-ean-994220.jpg",
     "status": true
   }
 ]

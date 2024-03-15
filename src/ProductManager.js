@@ -98,15 +98,17 @@ class ProductManager {
 
     async deleteProduct(id) {
         await this.loadProductsFromFile();
-        const productIndex = this.#products.findIndex(product => product.id === id);
-
+        const productId = parseInt(id); 
+    
+        const productIndex = this.#products.findIndex(product => product.id === productId);
+    
         if (productIndex !== -1) {
             this.#products.splice(productIndex, 1);
             await this.saveProductsToFile();
-            console.log(`Product with ID ${id} deleted successfully.`);
+            console.log(`Product with ID ${productId} deleted successfully.`);
             return true;
         } else {
-            console.error(`Product with ID ${id} not found.`);
+            console.error(`Product with ID ${productId} not found.`);
             return false;
         }
     }
